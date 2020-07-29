@@ -1,0 +1,21 @@
+package com.webage.eventregistration.dataservices.config;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+
+import com.webage.eventregistration.dataservices.repository.CustomerRepository;
+import com.webage.eventregistration.dataservices.service.CustomerService;
+import com.webage.eventregistration.dataservices.service.CustomerServiceImpl;
+
+@Configuration
+public class SpringServicesConfig {
+
+	@Autowired
+	private CustomerRepository customerRepository;
+	
+	@Bean
+	public CustomerService customerService() {
+		return new CustomerServiceImpl(customerRepository);
+	}
+}
