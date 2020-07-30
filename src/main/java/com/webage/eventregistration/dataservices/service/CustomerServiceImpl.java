@@ -29,4 +29,14 @@ public class CustomerServiceImpl implements CustomerService {
 		return customerRepository.findByUserName(userName);
 	}
 
+	@Override
+	public Customer saveCustomer(Customer customer) {
+		return customerRepository.save(customer);
+	}
+
+	@Override
+	public void deleteCustomer(Long id) {
+		customerRepository.deleteById(id);
+	}
+
 }

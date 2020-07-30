@@ -12,4 +12,7 @@ public interface CustomerService {
 	
 	public Optional<Customer> findByUserName(String userName);
 	
+	public Customer saveCustomer(Customer customer);
+	
+	public void deleteCustomer(Long id);
 }
