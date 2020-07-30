@@ -1,6 +1,5 @@
 package com.webage.eventregistration.dataservices.service;
 
-import java.util.Collection;
 import java.util.Optional;
 
 import com.webage.eventregistration.dataservices.domain.Customer;
@@ -16,7 +15,7 @@ public class CustomerServiceImpl implements CustomerService {
 	}
 
 	@Override
-	public Collection<Customer> findAll() {
+	public Iterable<Customer> findAll() {
 		return customerRepository.findAll();
 	}
 

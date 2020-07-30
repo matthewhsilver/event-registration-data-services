@@ -1,7 +1,5 @@
 package com.webage.eventregistration.dataservices.controller;
 
-import java.util.Collection;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -20,7 +18,7 @@ public class CustomerController {
 	private CustomerService customerService;
 	
 	@GetMapping
-	public Collection<Customer> findAllCustomers() {
+	public Iterable<Customer> findAllCustomers() {
 		return customerService.findAll();
 	}
 	
