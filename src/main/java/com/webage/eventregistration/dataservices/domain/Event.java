@@ -9,7 +9,7 @@ public class Event {
 
 	public Event() {
 	}
-
+	
 	public Event(Long id, String code, String title, String description) {
 		super();
 		this.id = id;

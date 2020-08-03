@@ -18,15 +18,15 @@ public class RegistrationController {
 
 	@Autowired
 	private RegistrationService registrationService;
-
+	
 	@GetMapping
 	public Collection<Registration> findAllRegistrations() {
 		return registrationService.findAll();
 	}
-
+	
 	@GetMapping("/{id}")
 	public ResponseEntity<Registration> findRegistrationById(@PathVariable("id") Long id) {
 		return ResponseEntity.of(registrationService.findById(id));
 	}
-
+	
 }

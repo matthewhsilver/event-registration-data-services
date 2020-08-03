@@ -20,7 +20,7 @@ public class InMemoryRegistrationRepository implements RegistrationRepository {
 				new Registration(4L, 2L, 1L, LocalDate.of(2020, Month.JULY, 23), ""),
 				new Registration(5L, 3L, 2L, LocalDate.of(2020, Month.JULY, 24), "")
 			));
-
+	
 	@Override
 	public Collection<Registration> findAll() {
 		return Collections.unmodifiableCollection(RegistrationData);

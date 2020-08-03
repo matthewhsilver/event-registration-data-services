@@ -9,8 +9,8 @@ import com.webage.eventregistration.dataservices.repository.EventRepository;
 public class EventServiceImpl implements EventService {
 
 	private EventRepository eventRepository;
-
-
+	
+	
 	public EventServiceImpl(EventRepository eventRepository) {
 		this.eventRepository = eventRepository;
 	}
@@ -26,5 +26,5 @@ public class EventServiceImpl implements EventService {
 	public Optional<Event> findById(Long id) {
 		return eventRepository.findById(id);
 	}
-
+	
 }

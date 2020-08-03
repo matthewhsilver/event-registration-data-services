@@ -18,15 +18,15 @@ public class EventController {
 
 	@Autowired
 	private EventService eventService;
-
+	
 	@GetMapping
 	public Collection<Event> findAllEvents() {
 		return eventService.findAll();
 	}
-
+	
 	@GetMapping("/{id}")
 	public ResponseEntity<Event> findEventById(@PathVariable("id") Long id) {
 		return ResponseEntity.of(eventService.findById(id));
 	}
-
+	
 }

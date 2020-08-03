@@ -22,20 +22,20 @@ public class SpringServicesConfig {
 	
 	@Autowired
 	private EventRepository eventRepository;
-
+	
 	@Autowired
 	private RegistrationRepository registrationRepository;
-
+	
 	@Bean
 	public CustomerService customerService() {
 		return new CustomerServiceImpl(customerRepository);
 	}
-
+	
 	@Bean
 	public EventService eventService() {
 		return new EventServiceImpl(eventRepository);
 	}
-
+	
 	@Bean
 	public RegistrationService registrationService() {
 		return new RegistrationServiceImpl(registrationRepository);

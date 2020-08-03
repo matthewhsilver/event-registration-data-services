@@ -8,7 +8,7 @@ import com.webage.eventregistration.dataservices.domain.Registration;
 public interface RegistrationRepository {
 
 	public Collection<Registration> findAll();
-
+	
 	public Optional<Registration> findById(Long id);
-
+	
 }

@@ -17,12 +17,12 @@ public class SpringRepositoryConfig {
 	public CustomerRepository customerRepository() {
 		return new InMemoryCustomerRepository();
 	}
-
+	
 	@Bean
 	public EventRepository eventRepository() {
 		return new InMemoryEventRepository();
 	}
-
+	
 	@Bean
 	public RegistrationRepository registrationRepository() {
 		return new InMemoryRegistrationRepository();
