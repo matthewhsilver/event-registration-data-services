@@ -16,8 +16,9 @@ public class InMemoryRegistrationRepository implements RegistrationRepository {
 	private static List<Registration> RegistrationData = new ArrayList<>(Arrays.asList(
 				new Registration(1L, 1L, 1L, LocalDate.of(2020, Month.JUNE, 5), ""),
 				new Registration(2L, 2L, 2L, LocalDate.of(2020, Month.JULY, 10), ""),
-				new Registration(3L, 3L, 3L, LocalDate.of(2020, Month.JULY, 21), "")
-				
+				new Registration(3L, 3L, 3L, LocalDate.of(2020, Month.JULY, 21), ""),
+				new Registration(4L, 2L, 1L, LocalDate.of(2020, Month.JULY, 23), ""),
+				new Registration(5L, 3L, 2L, LocalDate.of(2020, Month.JULY, 24), "")
 			));
 	
 	@Override
