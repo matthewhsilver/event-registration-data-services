@@ -28,8 +28,8 @@ public class InMemoryCustomerRepository implements CustomerRepository {
 	}
 
 	@Override
-	public Optional<Customer> findByUserName(String userName) {
-		return customerData.stream().filter(c -> userName.equals(c.getUserName())).findFirst();
+	public Optional<Customer> findByName(String name) {
+		return customerData.stream().filter(c -> name.equals(c.getName())).findFirst();
 	}
 
 	

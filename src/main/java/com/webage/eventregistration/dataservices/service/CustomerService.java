@@ -11,6 +11,6 @@ public interface CustomerService {
 	
 	public Optional<Customer> findById(Long id);
 	
-	public Optional<Customer> findByUserName(String userName);
+	public Optional<Customer> findByName(String name);
 	
 }

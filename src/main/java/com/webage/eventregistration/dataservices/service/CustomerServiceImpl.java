@@ -26,8 +26,8 @@ public class CustomerServiceImpl implements CustomerService {
 	}
 
 	@Override
-	public Optional<Customer> findByUserName(String userName) {
-		return customerRepository.findByUserName(userName);
+	public Optional<Customer> findByName(String name) {
+		return customerRepository.findByName(name);
 	}
 
 }

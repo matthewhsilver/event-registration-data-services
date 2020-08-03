@@ -29,9 +29,9 @@ public class CustomerController {
 		return ResponseEntity.of(customerService.findById(id));
 	}
 	
-	@GetMapping("/name/{userName}")
-	public ResponseEntity<Customer> findCustomerByUserName(@PathVariable("userName") String userName) {
-		return ResponseEntity.of(customerService.findByUserName(userName));
+	@GetMapping("/name/{name}")
+	public ResponseEntity<Customer> findCustomerByName(@PathVariable("name") String name) {
+		return ResponseEntity.of(customerService.findByName(name));
 	}
 	
 }
