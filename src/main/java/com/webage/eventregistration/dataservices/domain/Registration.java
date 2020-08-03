@@ -1,19 +1,24 @@
 package com.webage.eventregistration.dataservices.domain;
 
-import java.util.Date;
+import java.time.LocalDate;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class Registration {
 
 	private Long id;
-	private String eventId;
-	private String customerId;
-	private Date registrationDate;
+	@JsonProperty("event_id")
+	private Long eventId;
+	@JsonProperty("customer_id")
+	private Long customerId;
+	@JsonProperty("registration_date")
+	private LocalDate registrationDate;
 	private String notes;
 
 	public Registration() {
 	}
 
-	public Registration(Long id, String eventId, String customerId, Date registrationDate, String notes) {
+	public Registration(Long id, Long eventId, Long customerId, LocalDate registrationDate, String notes) {
 		super();
 		this.id = id;
 		this.eventId = eventId;
@@ -30,27 +35,27 @@ public class Registration {
 		this.id = id;
 	}
 
-	public String getEventId() {
+	public Long getEventId() {
 		return eventId;
 	}
 
-	public void setEventId(String eventId) {
+	public void setEventId(Long eventId) {
 		this.eventId = eventId;
 	}
 
-	public String getCustomerId() {
+	public Long getCustomerId() {
 		return customerId;
 	}
 
-	public void setCustomerId(String customerId) {
+	public void setCustomerId(Long customerId) {
 		this.customerId = customerId;
 	}
 
-	public Date getRegistrationDate() {
+	public LocalDate getRegistrationDate() {
 		return registrationDate;
 	}
 
-	public void setRegistrationDate(Date registrationDate) {
+	public void setRegistrationDate(LocalDate registrationDate) {
 		this.registrationDate = registrationDate;
 	}
 
