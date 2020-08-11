@@ -1,7 +1,5 @@
 package com.webage.eventregistration.dataservices.controller;
 
-import java.util.Collection;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -20,7 +18,7 @@ public class EventController {
 	private EventService eventService;
 	
 	@GetMapping
-	public Collection<Event> findAllEvents() {
+	public Iterable<Event> findAllEvents() {
 		return eventService.findAll();
 	}
 	

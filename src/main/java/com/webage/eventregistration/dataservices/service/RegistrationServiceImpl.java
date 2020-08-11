@@ -1,6 +1,5 @@
 package com.webage.eventregistration.dataservices.service;
 
-import java.util.Collection;
 import java.util.Optional;
 
 import com.webage.eventregistration.dataservices.domain.Registration;
@@ -16,7 +15,7 @@ public class RegistrationServiceImpl implements RegistrationService {
 	}
 
 	@Override
-	public Collection<Registration> findAll() {
+	public Iterable<Registration> findAll() {
 		return registrationRepository.findAll();
 	}
 

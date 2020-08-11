@@ -1,14 +1,9 @@
 package com.webage.eventregistration.dataservices.repository;
 
-import java.util.Collection;
-import java.util.Optional;
+import org.springframework.data.repository.CrudRepository;
 
 import com.webage.eventregistration.dataservices.domain.Registration;
 
-public interface RegistrationRepository {
+public interface RegistrationRepository extends CrudRepository<Registration, Long> {
 
-	public Collection<Registration> findAll();
-	
-	public Optional<Registration> findById(Long id);
-	
 }

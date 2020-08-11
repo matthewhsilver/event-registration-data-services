@@ -2,17 +2,31 @@ package com.webage.eventregistration.dataservices.domain;
 
 import java.time.LocalDate;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+@Entity
+@Table(name="REGISTRATIONS")
 public class Registration {
 
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
+	
 	@JsonProperty("event_id")
 	private Long eventId;
+	
 	@JsonProperty("customer_id")
 	private Long customerId;
+	
 	@JsonProperty("registration_date")
 	private LocalDate registrationDate;
+	
 	private String notes;
 
 	public Registration() {
