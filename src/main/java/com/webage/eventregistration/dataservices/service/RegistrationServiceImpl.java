@@ -24,5 +24,16 @@ public class RegistrationServiceImpl implements RegistrationService {
 		return registrationRepository.findById(id);
 	}
 
+	@Override
+	public Registration saveRegistration(Registration registration) {
+		return registrationRepository.save(registration);
+	}
+
+	@Override
+	public void deleteRegistration(Long id) {
+		registrationRepository.deleteById(id);
+	}
+
+	
 
 }

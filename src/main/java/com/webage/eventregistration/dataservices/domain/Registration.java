@@ -1,6 +1,6 @@
 package com.webage.eventregistration.dataservices.domain;
 
-import java.time.LocalDate;
+import java.util.Date;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -23,16 +23,16 @@ public class Registration {
 	
 	@JsonProperty("customer_id")
 	private Long customerId;
-	
+
 	@JsonProperty("registration_date")
-	private LocalDate registrationDate;
+	private Date registrationDate;
 	
 	private String notes;
 
 	public Registration() {
 	}
 
-	public Registration(Long id, Long eventId, Long customerId, LocalDate registrationDate, String notes) {
+	public Registration(Long id, Long eventId, Long customerId, Date registrationDate, String notes) {
 		super();
 		this.id = id;
 		this.eventId = eventId;
@@ -65,11 +65,11 @@ public class Registration {
 		this.customerId = customerId;
 	}
 
-	public LocalDate getRegistrationDate() {
+	public Date getRegistrationDate() {
 		return registrationDate;
 	}
 
-	public void setRegistrationDate(LocalDate registrationDate) {
+	public void setRegistrationDate(Date registrationDate) {
 		this.registrationDate = registrationDate;
 	}
 
