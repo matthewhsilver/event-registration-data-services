@@ -8,6 +8,6 @@ import com.webage.eventregistration.dataservices.domain.Customer;
 
 public interface CustomerRepository extends CrudRepository<Customer, Long> {
 
-	public Optional<Customer> findByUserName(String userName);
+	public Optional<Customer> findByName(String name);
 	
 }

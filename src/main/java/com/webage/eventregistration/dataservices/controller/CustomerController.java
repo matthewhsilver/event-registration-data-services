@@ -36,15 +36,15 @@ public class CustomerController {
 		return ResponseEntity.of(customerService.findById(id));
 	}
 	
-	@GetMapping("/name/{userName}")
-	public ResponseEntity<Customer> findCustomerByUserName(@PathVariable("userName") String userName) {
-		return ResponseEntity.of(customerService.findByUserName(userName));
+	@GetMapping("/name/{name}")
+	public ResponseEntity<Customer> findCustomerByName(@PathVariable("name") String name) {
+		return ResponseEntity.of(customerService.findByName(name));
 	}
 	
 	@PostMapping
 	public ResponseEntity<?> addCustomer(@RequestBody Customer customer) {
 		if (!customer.getId().equals(0L) ||
-				Utils.isEmpty(customer.getUserName()) ||
+				Utils.isEmpty(customer.getName()) ||
 				Utils.isEmpty(customer.getEmail())) {
 			return ResponseEntity.badRequest().build();
 		}
@@ -63,7 +63,7 @@ public class CustomerController {
 	@PutMapping("/{id}")
 	public ResponseEntity<?> updateCustomer(@PathVariable("id") Long id, @RequestBody Customer customer) {
 		if (!customer.getId().equals(id) ||
-				Utils.isEmpty(customer.getUserName()) ||
+				Utils.isEmpty(customer.getName()) ||
 				Utils.isEmpty(customer.getEmail())) {
 			return ResponseEntity.badRequest().build();
 		}
