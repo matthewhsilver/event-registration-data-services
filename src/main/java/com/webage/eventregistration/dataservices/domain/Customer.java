@@ -3,25 +3,25 @@ package com.webage.eventregistration.dataservices.domain;
 public class Customer {
 
 	private Long id;
-	private String name;
+	private Name name;
 	private String email;
 	private String password;
 
 	public Customer() {
 	}
 
-	public Customer(Long id, String name, String email, String password) {
+	public Customer(Long id, Name name, String email, String password) {
 		this.id = id;
 		this.name = name;
 		this.email = email;
 		this.password = password;
 	}
 
-	public String getName() {
+	public Name getName() {
 		return name;
 	}
 
-	public void setName(String name) {
+	public void setName(Name name) {
 		this.name = name;
 	}
 

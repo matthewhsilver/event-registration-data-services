@@ -8,13 +8,14 @@ import java.util.List;
 import java.util.Optional;
 
 import com.webage.eventregistration.dataservices.domain.Customer;
+import com.webage.eventregistration.dataservices.domain.Name;
 
 public class InMemoryCustomerRepository implements CustomerRepository {
 
 	private static List<Customer> customerData = new ArrayList<>(Arrays.asList(
-				new Customer(1L, "jsmith", "jsmith@gmail.com", "jsmith"),
-				new Customer(2L, "lhamilton", "lhamilton@gmail.com", "lhamilton"),
-				new Customer(3L, "bjones", "bjones@gmail.com", "bjones")
+				new Customer(1L, new Name("jsmith"), "jsmith@gmail.com", "jsmith"),
+				new Customer(2L, new Name("lhamilton"), "lhamilton@gmail.com", "lhamilton"),
+				new Customer(3L, new Name("bjones"), "bjones@gmail.com", "bjones")
 			));
 	
 	@Override
@@ -29,7 +30,7 @@ public class InMemoryCustomerRepository implements CustomerRepository {
 
 	@Override
 	public Optional<Customer> findByName(String name) {
-		return customerData.stream().filter(c -> name.equals(c.getName())).findFirst();
+		return customerData.stream().filter(c -> name.equals(c.getName().getName())).findFirst();
 	}
 
 	
